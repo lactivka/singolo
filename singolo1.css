@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/fonts/Lato/Lato-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1020px;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 89px;
+  border-bottom: 6px solid #323746;
+  text-transform: uppercase;
+  font-family: Lato;
+  color: #ffffff;
+  background-color: #2d303a;
+}
+
+h1 {
+  margin: 39px;
+  font-size: 25px;
+}
+
+h1 span {
+  margin-left: -2px;
+  color: #f06c64;
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:active {
+  color: #f06c64;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-column-gap: 10px;
+  padding-right: 19px;
+  padding-top: 9px;
+  width: 392px;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.navigation li {
+  padding: 2px;
+  margin-left: -2px;
+  color: #424657;
+}
+
+.home {
+  list-style-type: none;
+}
+
+.home a {
+  color: #f06c64;
+}
