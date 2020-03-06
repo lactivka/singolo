@@ -1,0 +1,205 @@
+@font-face {
+  font-family: "LatoBlack";
+  src: url("./assets/fonts/Lato/Lato-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LatoLight";
+  src: url("./assets/fonts/Lato/Lato-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LatoRegular";
+  src: url("./assets/fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.wrapper {
+  max-width: 1020px;
+  margin: auto;
+}
+
+.wrapper__get-a-quote {
+  background: #f06c64;
+  border-bottom: 6px solid #ea676b;
+}
+
+h2 {
+  margin: 0;
+  padding-left: 40px;
+  padding-top: 61px;
+  font-family: "LatoBlack";
+  font-size: 3rem;
+  color: #f0d8d9;
+}
+
+.get-a-quote__description {
+  padding: 0 40px 0 40px;
+  font-family: "LatoLight";
+  color: #f0d8d9;
+  line-height: 3rem;
+  text-align: justify;
+}
+
+.contact-information {
+  display: flex;
+  justify-content: space-between;
+  width: 940px;
+  margin: auto;
+}
+
+.information-block {
+
+}
+
+.contact-information__form {
+  width: 619px;
+}
+
+.contact-information__content {
+  width: 300px;
+}
+
+.wrapper__form-fields {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-field {
+  margin: 26px 0 -10px 0;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #d6564f;
+}
+
+.form-field__input {
+  height: 36px;
+  width: 100%;
+}
+
+.form-field::placeholder {
+  font-size: 1.2rem;
+  color: #f48c8f;
+  font-family: "LatoRegular";
+}
+
+.form-field:invalid {
+  border: 3px solid #bc261e;
+}
+
+.form-field__textarea::placeholder {
+  padding-top: 10px;
+}
+
+.button__submit {
+  margin-top: 31px;
+  margin-bottom: 7px;
+  padding: 7px 20px 7px 20px;
+  color: #ffffff;
+  background-color: #d6564f;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+h3 {
+  margin: 28px 0 0 0;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  color: #f0d8d9;
+  font-family: "LatoBlack";
+}
+
+.contact-information__text {
+  margin: 9px 0 0 0;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  color: #f0d8d9;
+  font-family: "LatoLight";
+  text-align: justify;
+}
+
+.wrapper__contacts {
+  margin-top: 20px;
+}
+
+.contact-information__contact {
+  display: flex;;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ico {
+  margin: 7px 0px 3px 1px;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.ico-location {
+  background: url(./assets-3/location.png);
+  background-repeat: no-repeat;
+  background-position-x: 2px;
+}
+
+.ico-phone {
+  background: url(./assets-3/phone.png);
+  background-repeat: no-repeat;
+}
+
+.ico-email {
+  background: url(./assets-3/mail.png);
+  background-repeat: no-repeat;
+  background-position-y: 2px;
+}
+
+.wrapper__contacts a {
+  margin-left: 11px;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  color: #f0d8d9;
+  font-family: "LatoLight";
+}
+
+.wrapper__footer {
+  display: flex;
+  padding-bottom: 16px;
+  justify-content: space-between;
+  background-color: #2d303a;
+}
+
+.copyright {
+  margin-top: 0;
+  padding: 26px 0 0 42px;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  color: #666d89;
+  font-family: "LatoLight";
+}
+
+.social-media {
+  display: flex;
+  padding-right: 34px;
+}
+
+.social-media__link {
+  margin: 21px 5px 0 3px;
+}
