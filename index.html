@@ -9,15 +9,15 @@
 </head>
 <body>
   <div class="wrapper">
-      <header class="header">
-          <h1>singolo<span>*</span></h1>
-          <ul class="navigation">
-              <li class="home"><a href="">home</a></li>
-              <li><a href="">services</a></li>
-              <li><a href="">portfolio</a></li>
-              <li><a href="">about</a></li>
-              <li><a href="">contact</a></li>
-          </ul>
+      <header class="header" id="home">
+        <h1>singolo<span>*</span></h1>
+        <ul class="navigation" id="navigation">
+          <li class="home"><a href="#home">home</a></li>
+          <li><a href="#services">services</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
       </header>
       <main>
           <section class="slider">
@@ -37,7 +37,7 @@
             <img class="slider_right" src="./assets/images/arrow.svg" alt="Slide right">
             </div>
           </section>
-          <section class="our-services">
+          <section class="our-services" id="services">
             <div class="wrapper wrapper__our-services">
               <h2 class="h2 our-services__header">Our Services</h2>
               <p class="description service__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -75,7 +75,7 @@
               </ul>
             </div>
           </section>
-          <section class="portfolio">
+          <section class="portfolio" id="portfolio">
             <div class="wrapper wrapper__portfolio">
               <h2 class="h2 portfolio__header">Portfolio</h2>
               <p class="description portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -103,7 +103,7 @@
               </div>
             </div>
           </section>
-          <section class="about-us">
+          <section class="about-us" id="about">
             <div class="wrapper wrapper__about-us">
               <h2 class="h2 about-us__header">About Us</h2>
               <p class="description about-us__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -144,7 +144,7 @@
               </div>
             </div>
           </section>
-          <section class="get-a-quote">
+          <section class="get-a-quote" id="contact">
             <div class="wrapper wrapper__get-a-quote">
             <h2 class="h2 get-a-quote__header">Get a Quote</h2>
             <p class="description get-a-quote__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -196,5 +196,6 @@
         </footer>
       </main>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
