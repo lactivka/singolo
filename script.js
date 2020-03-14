@@ -5,6 +5,8 @@ const IPHONE_VERTICAL = document.getElementById('iphone_vertical');
 const IPHONE_HORIZONTAL = document.getElementById('iphone_horizontal');
 const SCREEN_LEFT = document.getElementById('screen_left');
 const SCREEN_RIGHT = document.getElementById('screen_right');
+const BUTTON = document.getElementById('btn');
+const CLOSE_BUTTON = document.getElementById('close-btn');
 
 // set active navigation bar element on click
 NAVIGATION.addEventListener('click', (event) => {
@@ -39,3 +41,21 @@ SCREEN_RIGHT.addEventListener('click', () => {
   SCREEN_RIGHT.classList.toggle('opacity');
 });
 
+BUTTON.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  const subject = document.getElementById('subject').value.toString();
+  const describe = document.getElementById('describe').value.toString();
+  console.log(subject, describe);
+  subject === '' ?  document.getElementById('subject_result').innerText = 'Без темы' : document.getElementById('subject_result').innerText = 'Тема: ' + subject;
+  describe === '' ?  document.getElementById('describe_result').innerText = 'Без описания' : document.getElementById('describe_result').innerText = 'Описание: ' + describe;
+  document.getElementById('message-block').classList.remove('opacity');
+
+  document.getElementById('form').reset();
+});
+
+CLOSE_BUTTON.addEventListener('click', (event) => {
+  event.preventDefault();
+  document.getElementById('subject_result').innerText = '';
+  document.getElementById('message-block').classList.add('opacity');
+})

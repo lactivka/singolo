@@ -155,13 +155,23 @@
             <p class="description get-a-quote__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="contact-information">
               <div class="information-block contact-information__form">
-               <form action="#" method="post">
+               <form action="#" id="form" method="post">
                  <div class="wrapper__form-fields">
                     <input class="form-field form-field__input" type="text" name="name"  placeholder="Name (Required)" required>
                     <input class="form-field form-field__input" type="email" name="email" placeholder="Email (Required)" required>
-                    <input class="form-field form-field__input" type="text" name="subject" placeholder="Subject">
-                    <textarea class="form-field form-field__textarea" name="project-describe" cols="80" rows="10" style="resize: none;" placeholder="Describe your project in detail..."></textarea>
-                    <button type="submit" class="button button__submit">Send</button>
+                    <input class="form-field form-field__input" id="subject" type="text" name="subject" placeholder="Subject">
+                    <textarea class="form-field form-field__textarea" id="describe" name="project-describe" cols="80" rows="10" style="resize: none;" placeholder="Describe your project in detail..."></textarea>
+                    <button type="submit" class="button button__submit" id="btn">Send</button>
+                    <div class="message-block opacity" id="message-block">
+                      <div class="message">
+                        <p>Письмо отправлено</p>
+                        <br>
+                        <p id="subject_result"></p>
+                        <br>
+                        <p id="describe_result"></p>
+                        <button class="button button__submit" id="close-btn">OK</button>
+                      </div>
+                    </div>
                  </div>
                </form>
               </div>
