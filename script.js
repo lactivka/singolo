@@ -1,12 +1,14 @@
 const NAVIGATION = document.getElementById('navigation');
 const LEFT = document.getElementById('left');
 const RIGHT = document.getElementById('right');
-const IPHONE_VERTICAL = document.getElementById('iphone_vertical');
-const IPHONE_HORIZONTAL = document.getElementById('iphone_horizontal');
+const BTN_LEFT = document.getElementById('btn_left');
+const BTN_RIGHT = document.getElementById('btn_right');
 const SCREEN_LEFT = document.getElementById('screen_left');
 const SCREEN_RIGHT = document.getElementById('screen_right');
 const CLOSE_BUTTON = document.getElementById('close-btn');
 const FORM = document.getElementById('form');
+const SLIDE1 = document.getElementById('slide1');
+const SLIDE2 = document.getElementById('slide2');
 
 // set active navigation bar element on click
 NAVIGATION.addEventListener('click', (event) => {
@@ -15,33 +17,60 @@ NAVIGATION.addEventListener('click', (event) => {
 });
 
 // change slide after arrow click
-LEFT.addEventListener('click', () => {
-  document.querySelectorAll('.slide').forEach(el => el.classList.toggle('opacity'));
+RIGHT.addEventListener('click', () => {
+
+  document.querySelectorAll('.slide').forEach(el => {
+    if(el.classList.contains('opacity')) {
+        el.classList.remove('opacity');
+        setTimeout(() => {
+          el.classList.add('z-index');
+        }, 1200);
+
+    } else {
+
+      el.style.left = 1020 + 'px';
+      setTimeout(() => {
+        el.classList.remove('z-index');
+        el.classList.add('opacity');
+        el.style.left = 0 + 'px';
+      }, 1000);
+    }
+  })
 });
 
-RIGHT.addEventListener('click', () => {
-  document.querySelectorAll('.slide').forEach(el => el.classList.toggle('opacity'));
+LEFT.addEventListener('click', () => {
+
+  document.querySelectorAll('.slide').forEach(el => {
+    if(el.classList.contains('opacity')) {
+      el.classList.remove('opacity');
+      setTimeout(() => {
+        el.classList.add('z-index');
+      }, 1200);
+
+    } else {
+      el.style.left = -1020 + 'px';
+      setTimeout(() => {
+        el.classList.remove('z-index');
+        el.classList.add('opacity');
+        el.style.left = 0 + 'px';
+      }, 1000);
+    }
+  })
 });
 
 // turn on/off left phone screen
-IPHONE_VERTICAL.addEventListener('click', () => {
+BTN_LEFT.addEventListener('click', () => {
   SCREEN_LEFT.classList.toggle('opacity');
 });
-
-SCREEN_LEFT.addEventListener('click', () => {
-  SCREEN_LEFT.classList.toggle('opacity');
-})
 
 // turn on/off right phone screen
-IPHONE_HORIZONTAL.addEventListener('click', () => {
+BTN_RIGHT.addEventListener('click', () => {
   SCREEN_RIGHT.classList.toggle('opacity');
 });
 
-SCREEN_RIGHT.addEventListener('click', () => {
-  SCREEN_RIGHT.classList.toggle('opacity');
-});
-
+// send form and show popup window
 FORM.addEventListener('submit', (event) => {
+
   event.preventDefault();
 
   const subject = document.getElementById('subject').value.toString();
@@ -52,10 +81,12 @@ FORM.addEventListener('submit', (event) => {
   document.getElementById('message-block').classList.remove('opacity');
 
   CLOSE_BUTTON.addEventListener('click', (event) => {
-  event.preventDefault();
-  document.getElementById('subject_result').innerText = '';
-  document.getElementById('message-block').classList.add('opacity');
-})
+
+    event.preventDefault();
+
+    document.getElementById('subject_result').innerText = '';
+    document.getElementById('message-block').classList.add('opacity');
+  })
 
   document.getElementById('form').reset();
 });
