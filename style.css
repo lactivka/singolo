@@ -323,6 +323,9 @@ a:active {
 
 .navigation__links {
   display: flex;
+  justify-content: space-around;
+  width: 294px;
+  margin-top: 17px;
   margin-bottom: 18px;
   list-style: none;
   font-family: Lato;
@@ -331,16 +334,12 @@ a:active {
   line-height: 2rem;
 }
 
-.navigation__link {
-  margin: 3px 8px 0 2px;
-  padding: 0px 6px 0px 6px;
-  border-radius: 5px;
-  border: 1px solid #666d89;
-}
-
 .link {
   text-decoration: none;
   color: #767e9e;
+  border-radius: 5px;
+  border: 1px solid #666d89;
+  padding: 3px 6px 2px 6px;
 }
 
 .link_selected {
@@ -363,6 +362,11 @@ a:active {
   width: 220px;
   height: 187px;
   margin: 0 20px 20px 0;
+}
+
+.img_selected {
+  box-sizing: border-box;
+  border: 5px solid #F06C64;
 }
 
 .image1 {
