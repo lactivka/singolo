@@ -1,4 +1,5 @@
 const NAVIGATION = document.getElementById('navigation');
+const HREFS = NAVIGATION.querySelectorAll('a');
 const LEFT = document.getElementById('left');
 const RIGHT = document.getElementById('right');
 const BTN_LEFT = document.getElementById('btn_left');
@@ -12,10 +13,29 @@ const COLLECTION = document.getElementById('collection');
 
 let i = 0;
 
+// change active navigation bar element on scroll
+document.addEventListener('scroll', () => {
+  const curPos = window.scrollY;
+  const sections = document.querySelectorAll('section');
+
+  sections.forEach((el) => {
+
+    if ((el.offsetTop - 1) <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+      HREFS.forEach((a) => {
+        a.classList.remove('active');
+        if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+          a.classList.add('active');
+        }
+      });
+    }
+  });
+});
+
 // set active navigation bar element on click
 NAVIGATION.addEventListener('click', (event) => {
-  NAVIGATION.querySelectorAll('a').forEach(el => el.classList.remove('active'));
+  HREFS.forEach(el => el.classList.remove('active'));
   event.target.classList.add('active');
+
 });
 
 // change slide when arrow clicked
