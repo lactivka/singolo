@@ -13,6 +13,11 @@ const COLLECTION = document.getElementById('collection');
 
 let i = 0;
 
+let arr = [];
+  for (let i = 0; i < 12; i++) {
+    arr.push(i);
+  }
+
 // change active navigation bar element on scroll
 document.addEventListener('scroll', () => {
   const curPos = window.scrollY;
@@ -33,9 +38,11 @@ document.addEventListener('scroll', () => {
 
 // set active navigation bar element on click
 NAVIGATION.addEventListener('click', (event) => {
-  HREFS.forEach(el => el.classList.remove('active'));
-  event.target.classList.add('active');
 
+  if (event.target.getAttribute('href') !== null) {
+    HREFS.forEach(el => el.classList.remove('active'));
+    event.target.classList.add('active');
+  }
 });
 
 // change slide when arrow clicked
@@ -123,17 +130,25 @@ LINKS.addEventListener('click', (event) => {
     COLLECTION.querySelector('.img_selected').classList.remove('img_selected');
   }
 
-  i++;
-  let length = 12;
-
-  COLLECTION.querySelectorAll('.portfolio-image').forEach(el => {
-    let n = length - (i % length);
-    el.classList.remove(el.classList[1]);
-    el.classList.add(`image${n}`);
-    console.log(el.classList);
-    i++;
-  })
+  // shuffle images in portfolio block
+  let imgArr = COLLECTION.querySelectorAll('.portfolio-image');
+  shuffle(arr);
+  arr.forEach(el => COLLECTION.appendChild(imgArr[el]));
 });
+
+function shuffle(arr) {
+
+  var j, x, i;
+
+  for (i = arr.length - 1; i > 0; i--) {
+    j = Math.floor(Math.random() * (i + 1));
+    x = arr[i];
+    arr[i] = arr[j];
+    arr[j] = x;
+  }
+
+  return arr;
+}
 
 // make portfolio image selected
 COLLECTION.addEventListener('click', (event) => {
