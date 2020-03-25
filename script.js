@@ -162,5 +162,15 @@ COLLECTION.addEventListener('click', (event) => {
   }
 });
 
+// show menu
+document.getElementById('menu_show').addEventListener('click', () => {
+  document.getElementById('menu').classList.toggle('opacity');
+});
+
+// hide menu
+document.getElementById('menu_hide').addEventListener('click', () => {
+  document.getElementById('menu').classList.toggle('opacity');
+})
+
 
 
