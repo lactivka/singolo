@@ -10,6 +10,10 @@ const CLOSE_BUTTON = document.getElementById('close-btn');
 const FORM = document.getElementById('form');
 const LINKS = document.getElementById('links');
 const COLLECTION = document.getElementById('collection');
+const HEADER =document.getElementById('h1');
+const MENU = document.getElementById('menu');
+const MENU_ITEMS = document.getElementById('menu_items');
+let  MENU_BAR = document.getElementById('menu_bar');
 
 let i = 0;
 
@@ -17,6 +21,17 @@ let arr = [];
   for (let i = 0; i < 12; i++) {
     arr.push(i);
   }
+
+// hide mobile menu when screen size increase to 768px and more
+window.addEventListener('resize', () => {
+  console.log(event);
+  if (document.documentElement.clientWidth >= 768) {
+    if (!MENU.classList.contains('opacity')) {
+      MENU.classList.add('opacity');
+      HEADER.classList.remove('opacity');
+    }
+  }
+})
 
 // change active navigation bar element on scroll
 document.addEventListener('scroll', () => {
@@ -42,6 +57,17 @@ NAVIGATION.addEventListener('click', (event) => {
   if (event.target.getAttribute('href') !== null) {
     HREFS.forEach(el => el.classList.remove('active'));
     event.target.classList.add('active');
+  }
+});
+
+// set active menu element on click
+MENU_ITEMS.addEventListener('click', (event) => {
+
+  if (event.target.getAttribute('href') !== null) {
+    MENU_ITEMS.querySelectorAll('a').forEach(el => el.classList.remove('active'));
+    event.target.classList.add('active');
+    MENU.classList.add('opacity');
+    HEADER.classList.remove('opacity');
   }
 });
 
@@ -116,8 +142,6 @@ FORM.addEventListener('submit', (event) => {
     document.getElementById('subject_result').innerText = '';
     document.getElementById('message-block').classList.add('opacity');
   })
-
-  document.getElementById('form').reset();
 });
 
 // set active portfolio tag element on click
@@ -125,10 +149,6 @@ LINKS.addEventListener('click', (event) => {
 
   LINKS.querySelectorAll('a').forEach(el => el.classList.remove('link_selected'));
   event.target.classList.add('link_selected');
-
-  if(COLLECTION.querySelector('.img_selected') != null) {
-    COLLECTION.querySelector('.img_selected').classList.remove('img_selected');
-  }
 
   // shuffle images in portfolio block
   let imgArr = COLLECTION.querySelectorAll('.portfolio-image');
@@ -164,13 +184,27 @@ COLLECTION.addEventListener('click', (event) => {
 
 // show menu
 document.getElementById('menu_show').addEventListener('click', () => {
-  document.getElementById('menu').classList.toggle('opacity');
+  MENU.classList.toggle('opacity');
+  HEADER.classList.toggle('opacity');
 });
 
 // hide menu
 document.getElementById('menu_hide').addEventListener('click', () => {
-  document.getElementById('menu').classList.toggle('opacity');
+  MENU.classList.toggle('opacity');
+  HEADER.classList.toggle('opacity');
+});
+
+// reset form when modal window close
+CLOSE_BUTTON.addEventListener('click', () => {
+  FORM.reset();
 })
 
+// hide menu when click is not on menu bar
+MENU.addEventListener('click',(event) => {
+  if (!MENU_BAR.contains(event.target) && !MENU.classList.contains('opacity')) {
+    MENU.classList.add('opacity');
+    HEADER.classList.remove('opacity');
+  }
+});
 
 

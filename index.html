@@ -10,14 +10,14 @@
 <body>
   <div class="wrapper" id="home">
     <div class="menu__wrapper opacity" id="menu">
-        <div class="menu">
+        <div class="menu" id="menu_bar">
           <div class="menu__header">
             <div class="header__logo-line">
             <span class="header__hamburger hamburger transformed" id="menu_show"><span class="hamburger__line"></span></span>
           </div>
           <h1 class="menu_h1">singolo<span>*</span></h1>
           </div>
-          <ul class="menu__items">
+          <ul class="menu__items" id="menu_items">
             <li class="home"><a href="#slider" class="active">home</a></li>
             <li><a href="#services">services</a></li>
             <li><a href="#portfolio">portfolio</a></li>
@@ -30,7 +30,7 @@
       <div class="header__logo-line">
         <span class="header__hamburger hamburger" id="menu_hide"><span class="hamburger__line"></span></span>
       </div>
-      <h1>singolo<span>*</span></h1>
+      <h1 id="h1">singolo<span>*</span></h1>
       <ul class="navigation" id="navigation">
         <li class="home"><a href="#slider" class="active">home</a></li>
         <li><a href="#services">services</a></li>
@@ -137,7 +137,7 @@
               <p class="description about-us__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
               <div class="layout-3-column">
                 <div class="employee">
-                    <img src="./assets/images/AdamJensen.svg" alt="Adam Jensen photo" width="300" height="300">
+                    <img class="employee__photo" src="./assets/images/AdamJensen.svg" alt="Adam Jensen photo" width="300" height="300">
                     <h3 class="h3">Adam Jensen</h3>
                     <p class="employee__title">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem</p>
                     <div class="social-media">
@@ -148,7 +148,7 @@
                     </div>
                 </div>
                 <div class="employee">
-                    <img src="./assets/images/DesmondMiles.svg" alt="Desmond Miles photo" width="300" height="300">
+                    <img class="employee__photo" src="./assets/images/DesmondMiles.svg" alt="Desmond Miles photo" width="300" height="300">
                     <h3 class="h3">Desmond Miles</h3>
                     <p class="employee__title">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
                     <div class="social-media">
@@ -159,7 +159,7 @@
                     </div>
                 </div>
                 <div class="employee">
-                    <img src="./assets/images/ScolaraVisari.svg" alt="Scolara Visari photo" width="300" height="300">
+                    <img class="employee__photo" src="./assets/images/ScolaraVisari.svg" alt="Scolara Visari photo" width="300" height="300">
                     <h3 class="h3">Scolara Visari</h3>
                     <p class="employee__title">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
                     <div class="social-media">

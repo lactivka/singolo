@@ -56,7 +56,7 @@ body {
   font-family: Lato;
   font-weight: 700;
   color: #ffffff;
-  z-index: 3;
+  z-index: 4;
 }
 
 .header__logo-line {
@@ -600,7 +600,7 @@ a:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -772,11 +772,178 @@ a:active {
     bottom: calc(100vw*0.06);
     left: calc(100vw*0.08);
   }
+
+  .wrapper__our-services {
+    padding: 0 0 13px 40px;
+    border-bottom: none;
+  }
+
+  .h2 {
+    padding: 43px 0 2px 0;
+  }
+
+  .description {
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 60px;
+  }
+
+  .services {
+    padding-left: 0;
+    padding-right: 23px;
+    margin-top: 40px;
+    width: auto;
+    grid-template-columns: 1fr 3.2fr 1fr 3.2fr;
+    grid-template-rows: none;
+  }
+
+  .service__icon {
+    align-self: unset;
+    padding-top: 0;
+  }
+
+  .service__header {
+    padding-top: 0;
+  }
+
+  .service__description {
+    width: calc(100vw*0.285);
+    height: 77px;
+    padding-top: 10px;
+    margin-bottom: 38px;
+    line-height: 2.2rem;
+  }
+
+  .wrapper__portfolio {
+    border-bottom: 7.6px solid #323746;
+    padding: 18px 0 56px 0;
+  }
+
+  .portfolio__header {
+    padding: 42px 39px 2px 41px;
+    letter-spacing: -0.5px;
+    line-height: 3.6rem;
+  }
+
+  .portfolio__description {
+    padding-left: 41px;
+    padding-right: 87px;
+  }
+
+  .portfolio__navigation {
+    padding-left: 37px;
+  }
+
+  .navigation__links {
+    padding-left: 0;
+    width: 298px;
+    margin-top: 14px;
+  }
+
+  .layout-4-column {
+    padding: 0 30px 0 30px;
+    justify-content: center;
+  }
+
+  .portfolio-image {
+    height: calc(23.9vw);
+    margin: 10px;
+    flex: 1 0 25%;
+  }
+
+  .image1 {
+    background-size: calc(100vw*0.3);
+  }
+
+  .image2 {
+    background-size: calc(100vw*0.466);
+  }
+
+  .image3 {
+    background-size: calc(100vw*0.313);
+  }
+
+  .image4 {
+    background-size: calc(100vw*0.332);
+  }
+
+  .image5 {
+    background-size: calc(100vw*0.305);
+  }
+
+  .image6 {
+    background-size: calc(100vw*0.326);
+  }
+
+  .image7 {
+    background-size: calc(100vw*0.47);
+  }
+
+  .image8 {
+    background-size: calc(100vw*0.354);
+  }
+
+  .image9 {
+    background-size: calc(100vw*0.322);
+  }
+
+  .image10 {
+    background-size: calc(100vw*0.61);
+  }
+
+  .image11 {
+    background-size: calc(100vw*0.533);
+  }
+
+  .image12 {
+    background-size: calc(100vw*0.38);
+  }
+
+  .wrapper__about-us {
+    border: none;
+  }
+
+  .about-us__header {
+    padding: 52px 0 0 39px;
+  }
+
+  .about-us__description {
+    padding: 4px 57px 0 40px;
+  }
+
+  .layout-3-column {
+    justify-content: space-between;
+    margin: 39px 40px 10px 42px;
+  }
+
+  .employee {
+    width: 28.5vw;
+    margin: 0;
+  }
+
+  .employee__photo {
+    width: calc(28.5vw);
+    height: auto;
+  }
+
+  .h3 {
+    margin: 11px 0 0 0;
+  }
+
+  .employee__title {
+    margin-top: 1px;
+    margin-bottom: 0px;
+  }
+
+  .social-media {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 767px) {
 
   .wrapper {
+    max-width: 767px;
     width: calc(100vw - 0.2px);
   }
 
@@ -850,7 +1017,7 @@ a:active {
   }
 
   .menu__wrapper {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -942,6 +1109,157 @@ a:active {
     width: calc(100vw*0.05);
     height: calc(100vw*0.05);
   }
+
+  .wrapper__our-services {
+    padding: 0px 29px 0px 32px;
+    box-sizing: border-box;
+  }
+
+  .our-services__header {
+    padding: 31px 0 2px 0;
+  }
+
+  .description {
+    padding-right: 0px;
+    text-align: left;
+    letter-spacing: 0.2px;
+  }
+
+  .services {
+    margin-top: 31px;
+    margin-bottom: -3px;
+    grid-template-columns: 1fr 3.2fr;
+  }
+
+  .service__icon {
+    margin-right: 17px;
+  }
+
+  .service__description {
+    width: calc(100vw*0.59);
+    margin-bottom: 15px;
+  }
+
+  .wrapper__portfolio {
+    border: none;
+    padding: 0 0 41px 0;
+  }
+
+  .portfolio__header {
+    padding-left: 30px;
+  }
+
+  .portfolio__description {
+    padding-left: 30px;
+    padding-right: 31px;
+    letter-spacing: 0.14px;
+  }
+
+  .portfolio__navigation {
+    padding-left: 25px;
+  }
+
+  .navigation__links {
+    width: 300px;
+    margin-top: 18.5px;
+    margin-bottom: 19px;
+  }
+
+  .layout-4-column {
+    max-height: calc(140vw + 35px);
+    padding: 0 23.5px 0 23.5px;
+  }
+
+  .portfolio-image {
+    height: calc(34.3vw);
+    flex: 1 0 46%;
+    margin: 6.5px;
+  }
+
+  .image1 {
+    background-size: calc(100vw*0.45);
+  }
+
+  .image2 {
+    background-size: calc(100vw*0.68);
+    background-position-x: -59px;
+    background-position-y: -31px;
+  }
+
+  .image3 {
+    background-size: calc(100vw*0.46);
+  }
+
+  .image4 {
+    background-size: calc(100vw*0.5);
+  }
+
+  .image5 {
+    background-size: calc(100vw*0.45);
+  }
+
+  .image6 {
+    background-size: calc(100vw*0.49);
+  }
+
+  .image7 {
+    background-size: calc(100vw*0.7);
+    background-position-x: -25px;
+    background-position-y: -29px;
+  }
+
+  .image8 {
+    background-size: calc(100vw*0.56);
+  }
+
+  .image9 {
+    background-size: calc(100vw*0.46);
+  }
+
+  .image10 {
+    background-size: calc(100vw*1.02);
+  }
+
+  .image11 {
+    background-size: calc(100vw*1);
+  }
+
+  .image12 {
+    background-size: calc(100vw*0.56);
+  }
+
+  .wrapper__about-us {
+    padding-bottom: 11px;
+  }
+
+  .about-us__header {
+    padding: 35px 0 0 29px;
+  }
+
+  .get-a-quote__description {
+    padding: 4px 40px 0 30px;
+    letter-spacing: 0.1px;
+  }
+
+  .layout-3-column {
+    flex-direction: column;
+    margin: 0;
+    padding: 25px 30px 0px 31px;
+  }
+
+  .employee {
+    width: auto;
+    margin: 0;
+    padding-bottom: 31.5px;
+  }
+
+  .employee__photo {
+    width: calc(100vw - 61px);
+  }
+
+  .h3 {
+    margin-top: 17px;
+  }
 }
 
 @media (max-width: 374px) {
@@ -953,6 +1271,20 @@ a:active {
   .iphone_vertical {
     top: 20px;
     left: 41px;
+  }
+
+  .service__description {
+    height: calc(100vw*0.205);
+    overflow: inherit;
+    margin-bottom: 21px;
+  }
+
+  .portfolio-image {
+    flex: 1 0 45%;
+  }
+
+  .navigation__links {
+    width: 275px;
   }
 
 }
