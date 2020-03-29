@@ -13,6 +13,7 @@ const COLLECTION = document.getElementById('collection');
 const HEADER =document.getElementById('h1');
 const MENU = document.getElementById('menu');
 const MENU_ITEMS = document.getElementById('menu_items');
+const MENU_HREFS = MENU_ITEMS.querySelectorAll('a');
 let  MENU_BAR = document.getElementById('menu_bar');
 
 let i = 0;
@@ -42,6 +43,25 @@ document.addEventListener('scroll', () => {
 
     if ((el.offsetTop - 1) <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
       HREFS.forEach((a) => {
+        a.classList.remove('active');
+        if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+          a.classList.add('active');
+        }
+      });
+    }
+  });
+});
+
+
+// change active menu element on scroll
+document.addEventListener('scroll', () => {
+  const curPos = window.scrollY;
+  const sections = document.querySelectorAll('section');
+
+  sections.forEach((el) => {
+
+    if ((el.offsetTop - 1) <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+      MENU_HREFS.forEach((a) => {
         a.classList.remove('active');
         if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
           a.classList.add('active');
@@ -85,12 +105,14 @@ RIGHT.addEventListener('click', () => {
 
       el.style.left = 1020 + 'px';
       setTimeout(() => {
-        el.classList.remove('z-index');
         el.classList.add('opacity');
+        el.classList.remove('z-index');
+
         el.style.left = 0 + 'px';
       }, 1000);
     }
-  })
+  });
+  setTimeout(1000);
 });
 
 LEFT.addEventListener('click', () => {
@@ -105,12 +127,13 @@ LEFT.addEventListener('click', () => {
     } else {
       el.style.left = -1020 + 'px';
       setTimeout(() => {
-        el.classList.remove('z-index');
         el.classList.add('opacity');
+        el.classList.remove('z-index');
+
         el.style.left = 0 + 'px';
       }, 1000);
     }
-  })
+  });
 });
 
 // turn on/off left phone screen
@@ -130,7 +153,6 @@ FORM.addEventListener('submit', (event) => {
 
   const subject = document.getElementById('subject').value.toString();
   const describe = document.getElementById('describe').value.toString();
-  console.log(subject, describe);
   subject === '' ?  document.getElementById('subject_result').innerText = 'Без темы' : document.getElementById('subject_result').innerText = 'Тема: ' + subject;
   describe === '' ?  document.getElementById('describe_result').innerText = 'Без описания' : document.getElementById('describe_result').innerText = 'Описание: ' + describe;
   document.getElementById('message-block').classList.remove('opacity');
@@ -203,7 +225,7 @@ CLOSE_BUTTON.addEventListener('click', () => {
 MENU.addEventListener('click',(event) => {
   if (!MENU_BAR.contains(event.target) && !MENU.classList.contains('opacity')) {
     MENU.classList.add('opacity');
-    HEADER.classList.remove('opacity');
+    HEADER.classList.toggle('opacity');
   }
 });
 
